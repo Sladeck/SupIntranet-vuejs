@@ -1,6 +1,6 @@
 <template>
   <main id="app">
-    
+
     <header>
       <nav class="container">
         <a href="#">Accueil</a>
@@ -8,54 +8,20 @@
         <a href="#">Ajouter un collaborateur</a>
       </nav>
     </header>
-    
-    <div class="container">
-      <h1>Bienvenue dans l'intranet</h1>
 
-      <p>La plate-forme sociale de l'entreprise</p>
-
-      <hr>
-
-      <p>Avez-vous dit bonjour aujourd'hui à :</p>
-
-      <user-card :user="user"></user-card>
-
-      <div class="actions">
-        <a href="#" @click.prevent="randomUser" class="btn">
-          <icon name="random" /> Dire bonjour à quelqu'un d'autre
-        </a>
-      </div>
+    <home-view />
 
     </div><!-- .container -->
   </main>
 </template>
 
 <script>
-import users from './data/_users.json'
-import UserCard from './components/UserCard.vue'
+import HomeView        from './views/Home.vue'
 
 export default {
   name: 'app',
-  
-  components: { UserCard },
 
-  data () {
-    return {
-      user : null
-    }
-  },
-
-  methods: {
-    // Prend un utilisateur au hasard dans le tableau 'users'
-    randomUser() {
-      this.user = users[ Math.floor(Math.random() * users.length) ]
-    }
-  },
-
-  // Lorsque le composant App est initialisé par Vue.js, on charge un utilisateur au hasard
-  created() {
-    this.randomUser()
-  }
+  components: { HomeView },
 }
 </script>
 
@@ -119,7 +85,7 @@ header {
     transition: all 150ms;
     transform: scale(1);
   }
-  
+
   a:hover {
     background-color: #128953;
     transform: scale(1.05);
