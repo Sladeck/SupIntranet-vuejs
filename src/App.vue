@@ -3,13 +3,14 @@
 
     <header>
       <nav class="container">
-        <a href="#">Accueil</a>
+        <a href="/">Accueil</a>
         <a href="#">Liste des collaborateurs</a>
         <a href="#">Ajouter un collaborateur</a>
       </nav>
     </header>
-
     <home-view />
+    <list-view />
+    <add-view/>
 
     </div><!-- .container -->
   </main>
@@ -17,11 +18,13 @@
 
 <script>
 import HomeView        from './views/Home.vue'
+import ListView        from './views/List.vue'
+import AddView         from './views/Add.vue'
 
 export default {
   name: 'app',
 
-  components: { HomeView },
+  components: { HomeView, ListView, AddView },
 }
 </script>
 

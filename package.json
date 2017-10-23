@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "vue": "^2.4.4",
-    "vue-awesome": "^2.3.3"
+    "vue-awesome": "^2.3.3",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
